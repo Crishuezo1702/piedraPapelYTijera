@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra Papel Y Tijera</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <button id="boton-mute">🔊</button>
+
+    <header>
+        <h1 class="titulo">Piedra, Papel y Tijera</h1>
+    </header>
+    
+    <main>
+
+        <section id="instrucciones">
+            <h2 class="subtitulo">📖 ¿Como jugar?</h2>
+
+          <ol>
+                <li>Selecciona un modo de juego (1 Jugador o 2 Jugadores).</li>
+                <li>Elige Piedra, Papel o Tijera.</li>
+                <li>Presiona el botón <strong>"Seleccionar"</strong>.</li>
+                <li>El ganador de cada ronda obtiene 1 punto.</li>
+                <li>El primero en llegar a 3 puntos gana la partida.</li>
+                <li>Usa <strong>"Siguiente ronda"</strong> para continuar o <strong>"Nueva partida"</strong> para volver al menú cuando termine la partida.</li>
+          </ol>
+        </section>
+
+        <section id="section-botones-modo">
+            <h2 class="subtitulo">Selecciona modo de juego</h2>
+            <div id="tipo-de-juego-botones">
+                <button class="boton-modo" id="boton-solo">👤 1 Jugador</button>
+                <button class="boton-modo" id="boton-versus">👥 2 Jugadores</button>
+
+            </div>
+        </section>
+
+
+        <section id="seleccionar-opciones">
+            <h2 id="subtitulo-opciones" class="subtitulo">Elige tu opcion:</h2>
+            <div id="contenedorTarjetas" >
+                <input type="radio" name="opciones" id="piedra" />
+                <label class="tarjeta-opcion" for ="piedra" >
+                    <p>Piedra</p>
+                    <img src="./assets/piedra.png"  alt="piedra"/>
+                </label>
+                <input type="radio" name="opciones"id="papel" />
+                <label class="tarjeta-opcion" for="papel">
+                    <p>Papel</p>
+                    <img src="./assets/papel-arrugado.png" alt="papel" />
+                </label>
+                <input type="radio" name="opciones" id="tijera"/>
+                <label class="tarjeta-opcion" for="tijera">
+                    <p>Tijera</p>
+                    <img src="./assets/cortar-con-tijeras.png" alt="tijera"/>
+                </label>
+            </div>
+
+            <p><button class= "boton-modo" id="boton-seleccion">Seleccionar</button></p>
+
+        </section>
+
+        <section id="combate">
+
+            <h2 class="subtitulo">¡Combate!</h2>
+            <div id="contenedor-combate">
+
+                <div class="lado">
+                    <h3 id="titulo-jugador">Tú</h3>
+                    <img id="imagen-opcion-jugador" src="" alt="" />
+                    <p id="nombre-opcion-jugador"></p>
+                </div>
+            
+            <h2 class="vs">VS</h2>
+
+                <div class="lado" >
+                    <h3 id="titulo-rival">Computadora</h3>
+                    <img id="imagen-opcion-computadora" src="" alt="" />
+                    <p id="nombre-opcion-computadora"></p>
+                </div>
+            </div>
+                <h2 id="resultado"></h2>
+
+                <div id="marcador">
+                    <p>
+                        <span id="texto-jugador">Jugador</span>:
+                        <span id="puntos-jugador">0</span>
+                    </p>
+
+                    <p> 
+                        <span id="texto-rival">Computadora</span>:
+                        <span id="puntos-computadora">0</span>
+                    </p>
+                </div>
+                <button class="boton-modo" id="volver-jugar">Siguiente ronda</button>
+                <button class="boton-modo" id="nueva-partida">Nueva partida</button>
+
+
+        </section>
+    </main>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+

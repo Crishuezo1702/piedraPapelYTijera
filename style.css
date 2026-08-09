@@ -1,0 +1,323 @@
+body{
+    margin: 0;
+    font-family: "Cormorant Garamond", serif;
+    background-color: #0A1128;
+}
+
+.titulo{
+    color: #FFF200;
+    font-size: 40px;
+    font-family: "Libre Baskerville", serif;
+    text-align: center;
+}
+
+.subtitulo{
+    color: #FFF200;
+    font-size: 30px;
+}
+
+#seleccionar-opciones{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contenedorTarjetas{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.tarjeta-opcion{
+    color: white;
+    font-size: 20px;
+    width: 200px;
+    height: 200px;
+    background-color: #1C2541;
+    border-radius: 20px;
+    border: 2px solid #FFF200;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.15s;
+
+    animation: aparecer 2s ease;
+}
+
+.tarjeta-opcion img{
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
+
+.tarjeta-opcion:hover{
+    transform: translateY(-5px) scale(1.05);
+    cursor: pointer;
+}
+
+input{
+    display: none;
+}
+
+input:checked + label{
+    border: 2px solid green;
+    transform: scale(1.05);
+}
+
+.boton-modo
+{
+    width: 150px;
+    height: 50px;
+    background: transparent;
+    border-radius: 20px;
+    color: #FFF200;
+    font-family: "Libre Baskerville",serif;
+    border: 2px solid #FFF200;
+    margin-top: 30px;
+    transition: .2s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center
+
+}
+
+
+.boton-modo:hover
+{
+    transform: translateY(-5px);
+    cursor: pointer;
+    background-color:#FFF200 ;
+    color: #0A1128;
+}
+
+#nueva-partida{
+    display: none;
+}
+
+#combate{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#contenedor-combate{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    gap: 40px;
+}
+
+.lado{
+    background-color: #1C2541;
+    border: 2px solid #FFF200;
+    border-radius: 20px;
+    color: white;
+    font-size: 20px;
+
+    width: 200px;
+    height: 250px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    animation: aparecerCombate 2s ease;
+}
+
+.lado img{
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.vs{
+    color: #FFF200;
+    font-size: 40px;
+}
+
+#resultado{
+    color: #FFF200;
+    font-size: 40px;
+    margin-top: 30px;
+    animation: resultadorAparecer 1s ease;
+}
+
+#marcador{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    color: white;
+    font-size: 15px;
+    font-family: "Libre Baskerville", serif;
+}
+
+#instrucciones h2{
+    margin-bottom: 20px;
+}
+#instrucciones{
+    background-color: #1C2541;
+    border: 2px solid #FFF200;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    width: 650px;
+    color: white;
+}
+
+#section-botones-modo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#tipo-de-juego-botones{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+@keyframes aparecer{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes resultadorAparecer{
+    from{
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to
+    {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes aparecerCombate{
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px)
+    }
+
+}
+
+@media (max-width: 600px){
+
+    #instrucciones{
+        width: calc(100% - 40px);
+        margin: 20px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+
+    .titulo{
+        font-size: 28px;
+    }
+
+    #tipo-de-juego-botones{
+    gap: 15px;
+    flex-wrap: wrap;
+    }
+
+   .tarjeta-opcion{
+    width: 105px;
+    height: 140px;
+    }
+    #contenedorTarjetas{
+        gap: 10px;
+    }
+
+     .tarjeta-opcion img{
+        width: 70px;
+        height: 70px;
+    }
+
+     #contenedor-combate{
+        gap: 10px;
+    }
+
+    .lado{
+    width: 120px;
+    height: 180px;
+}
+
+    .lado img{
+    width: 100px;
+    height: 100px;
+    }
+
+    .vs{
+    font-size: 30px;
+    }
+
+    #resultado{
+        font-size: 30px;
+        margin-top: 20px;
+    }
+
+    #marcador{
+        font-size: 13px;
+        gap: 20px;
+    }
+
+    #titulo-jugador,
+    #titulo-rival{
+        font-size: 14px;
+    }
+
+    #texto-jugador,
+    #texto-rival{
+        font-size: 12px;
+    }
+
+    #boton-mute{
+    width: 35px;
+    height: 35px;
+    top: 10px;
+    right: 10px;
+    font-size: 16px;
+    }
+
+    main{
+    padding-top: 40px;
+    }
+
+}
+
+#boton-mute{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    width: 45px;
+    height: 45px;
+
+    background: #1C2541;
+    border: 2px solid #FFF200;
+    border-radius: 50%;
+
+    font-size: 20px;
+    cursor: pointer;
+
+    z-index: 1000;
+}
