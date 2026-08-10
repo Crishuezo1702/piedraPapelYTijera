@@ -4,24 +4,24 @@ Juego interactivo de Piedra, Papel y Tijera desarrollado con HTML, CSS y JavaScr
 
 ## 🎮 Características
 
-- 👤 Modo 1 jugador contra la computadora.
-- 👥 Modo 2 jugadores.
+- 👤 Modo de 1 jugador contra la computadora.
+- 👥 Modo de 2 jugadores.
 - 🪨 Piedra, 📄 Papel y ✂️ Tijera.
 - 🏆 Sistema de puntuación.
 - 🎵 Efectos de sonido y música de fondo.
-- 🔇 Botón para activar o desactivar el sonido.
-- 📱 Diseño responsive para dispositivos móviles.
+- 🔇 Control de sonido.
+- 📱 Diseño responsive.
 - 🎨 Interfaz personalizada con animaciones.
 
 ## 🕹️ ¿Cómo jugar?
 
 1. Selecciona el modo de juego.
 2. Elige Piedra, Papel o Tijera.
-3. Presiona **"Seleccionar"**.
-4. El ganador de cada ronda obtiene 1 punto.
+3. Presiona **Seleccionar**.
+4. El ganador de cada ronda obtiene un punto.
 5. El primero en llegar a 3 puntos gana la partida.
-6. Utiliza **"Siguiente ronda"** para continuar.
-7. Cuando termine la partida, puedes utilizar **"Nueva partida"** para volver al menú.
+6. Selecciona **Siguiente ronda** para continuar.
+7. Al finalizar, puedes comenzar una **Nueva partida**.
 
 ## 🛠️ Tecnologías utilizadas
 
@@ -36,6 +36,11 @@ Juego interactivo de Piedra, Papel y Tijera desarrollado con HTML, CSS y JavaScr
 ```text
 PiedraPapelYTijera/
 │
+├── .github/
+│   └── ISSUE_TEMPLATE/
+│       ├── bug_report.md
+│       └── feature_request.md
+│
 ├── assets/
 │   ├── imágenes
 │   └── sonidos
@@ -45,4 +50,3 @@ PiedraPapelYTijera/
 ├── style.css
 ├── .gitignore
 └── README.md
-
